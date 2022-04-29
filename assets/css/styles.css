@@ -19,10 +19,22 @@ body {
 
 .navbar {
 	display: flex;
-	flex-direction: row;
-	justify-content: space-between;
-	align-items: center;
-	padding: 20px 0;
+	flex-direction: column;
+	gap: 2rem;
+	margin-top: 2rem;
+	justify-content: flex-start;
+	align-items: flex-start;
+}
+
+.navbar-links {
+	display: flex;
+	row-gap: 2rem;
+	flex-direction: column;
+}
+
+.navbar-actions {
+	display: flex;
+	column-gap: 2rem;
 }
 
 .container {
@@ -54,6 +66,7 @@ body {
 	border-radius: 10px;
 }
 
+/* For screens size with width 640px and above  */
 @media (min-width: 640px) {
 	.container {
 		width: 640px;
@@ -64,6 +77,7 @@ body {
 	}
 }
 
+/* For screens size with width 768px and above  */
 @media (min-width: 768px) {
 	.container {
 		width: 768px;
@@ -72,18 +86,9 @@ body {
 		margin-right: auto;
 		margin-left: auto;
 	}
-
-	.navbar-links {
-		display: flex;
-		column-gap: 4rem;
-	}
-
-	.navbar-actions {
-		display: flex;
-		column-gap: 2rem;
-	}
 }
 
+/* For screens size with width 1024px and above  */
 @media (min-width: 1024px) {
 	.container {
 		width: 1024px;
@@ -92,8 +97,22 @@ body {
 		margin-right: auto;
 		margin-left: auto;
 	}
+
+	.navbar {
+		display: flex;
+		flex-direction: row;
+		gap: 2rem;
+		justify-content: space-between;
+	}
+
+	.navbar-links {
+		display: flex;
+		column-gap: 4rem;
+		flex-direction: row;
+	}
 }
 
+/* For screens size with width 1440px and above  */
 @media (min-width: 1440px) {
 	.container {
 		width: 1440px;
